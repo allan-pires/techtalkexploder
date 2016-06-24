@@ -1,29 +1,26 @@
 <h2>Cadastro do TechTalk</h2>
 
-<%# if @techtalk.errors.any? %>
-<%# end %>
-
 <%= form_for @techtalk, url: { action: "create" }, html: { class: "form-horizontal" } do |f| %>
   <%= f.label :title, 'Título do TechTalk' %>
-  <%= f.text_field :title, placeholder: "Ex.: TechTalk Explosion", input_html: { class: 'input-field' } %>
+  <%= f.text_field :title, placeholder: "Ex.: TechTalk Explosion", input_html: { class: 'input-field' }, maxlength: "25" %>
 
   <%= f.label :description, 'Descrição do TechTalk' %>
-  <%= f.text_field :description, placeholder: 'Ex: Descubra como revolucionar a web utilizando essa nova ferramenta', length: "120" %>
+  <%= f.text_field :description, placeholder: 'Ex: Descubra como revolucionar a web utilizando essa nova ferramenta', maxlength: "120" %>
 
   <%= f.label :date, 'Date' %>
-  <%= f.date_field :date %>
+  <%= f.date_field :date, class: 'datepicker picker__input'  %>
 
   <%= f.label :tags, 'Tags' %>
-  <%= f.text_field :tags, placeholder: "Ex.: Programação, Design, UX...", input_html: { class: 'input-field' } %>
+  <%= f.text_field :tags, placeholder: "Ex.: Programação, Mobile, Design, UX, Ruby...", maxlength: "25" %>
 
   <%= f.label :company_name, 'Nome da empresa' %>
-  <%= f.text_field :company_name, placeholder: 'Informe o nome da sua empresa' %>
+  <%= f.text_field :company_name, placeholder: 'Informe o nome da sua empresa', maxlength: "50" %>
 
   <%= f.label :url, 'Site' %>
-  <%= f.text_field :url, placeholder: 'Ex.: www.google.com', class: "input-field" %>
+  <%= f.text_field :url, placeholder: 'Ex.: www.google.com', class: "input-field", maxlength: "20" %>
 
   <%= f.label :company_email, 'Email' %>
-  <%= f.text_field :company_email, placeholder: 'seu-email@seu-dominio.com', class: "input-field" %>
+  <%= f.text_field :company_email, placeholder: 'seu-email@seu-dominio.com', class: "input-field", maxlength: "20" %>
 
   <%= f.submit "Cadastrar", class: "btn" %>
 <% end %>

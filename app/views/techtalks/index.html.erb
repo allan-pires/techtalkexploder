@@ -21,8 +21,10 @@
         <% tech.tagsArray.each do |tag| %>
           <div class="chip color"><%= tag %></div>
         <% end %>
-        <p class="job-name card-title"><%= tech.title %></p>
-        <p class="job-description"><%= tech.description %></p>
+        <div class="card-content">
+          <p class="card-title"><%= tech.title %></p>
+          <p><%= tech.description %></p>
+        </div>
         <p class="enterprise">
           <a href="<%= tech.url %>"><%= tech.company_name %></a>
         </p>
