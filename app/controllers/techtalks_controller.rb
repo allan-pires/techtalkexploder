@@ -30,7 +30,7 @@ class TechtalksController < ApplicationController
 
 	def filter
 		param = request.query_parameters['keyword']
-		@techtalks = Techtalk.where(['tags LIKE ? OR name LIKE ? ', "%#{param}%", "%#{param}%"])
+		@techtalks = Techtalk.where(['tags LIKE ? OR title LIKE ? ', "%#{param}%", "%#{param}%"])
 	end
 
   	def create

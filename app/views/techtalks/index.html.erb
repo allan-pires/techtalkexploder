@@ -16,9 +16,9 @@
      	<% tech.tagsArray.each do |tag| %>
       	<div class="chip color"><%=tag%></div>
       	<% end %>
-        <p class="job-name card-title"><%=tech.name%></p>
+        <p class="job-name card-title"><%=tech.title%></p>
         <p class="job-description"><%=tech.description%></p>
-        <p class="enterprise">Empresa: <a href="#" target="_blank" alt="Site da Empresa">Nome da Empresa<%#= tech.name %></a></p>
+        <p class="enterprise"><%= tech.company_name%></a></p>
         <p class="date">24/06/2016</p>
         <%= link_to "Saiba mais", "#", class: "waves-effect btn-flat" %>
       </div>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160624171344) do
+ActiveRecord::Schema.define(version: 20160624184432) do
 
   create_table "google_oauth_credentials", force: :cascade do |t|
     t.integer "user_id", limit: 4
@@ -19,7 +19,6 @@ ActiveRecord::Schema.define(version: 20160624171344) do
   end
 
   create_table "techtalks", force: :cascade do |t|
-    t.string   "name",          limit: 255
     t.string   "description",   limit: 255
     t.string   "tags",          limit: 255
     t.datetime "created_at",                null: false
