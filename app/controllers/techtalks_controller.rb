@@ -1,5 +1,7 @@
 class TechtalksController < ApplicationController
 
+  before_filter :authorize, except: [:list]
+
   def index
     @techtalks = Techtalk.all
   end
@@ -20,6 +22,10 @@ class TechtalksController < ApplicationController
         format.json { render json: @techtalk.errors, status: :unprocessable_entity }
       end
     end
+  end
+
+  def list
+    @techtalks = Techtalk.order('id desc').limit(10)
   end
 
   private

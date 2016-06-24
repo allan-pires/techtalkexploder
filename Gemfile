@@ -25,10 +25,14 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'materialize-sass'
 
 # Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt', '~> 3.1.7'
+
+gem "omniauth-google-oauth2"
 
 # Use Unicorn as the app server
 gem 'unicorn'
+
+gem 'rails_12factor'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -42,7 +46,7 @@ group :development, :test do
   gem 'pry-rails'
   gem 'byebug'
   gem 'rspec-rails', '~> 3.4'
-  gem 'materialize-sass'
+  gem 'pry'
 end
 
 group :development do
