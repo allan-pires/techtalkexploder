@@ -27,6 +27,14 @@ footer {
   color: white;
 }
 
+#main-content {
+  min-height: 450px;
+}
+
+.nav-wrapper {
+  background-color: $darkcolor;
+}
+
 .menu {
   /*background-color: #46BBAB;*/
 }

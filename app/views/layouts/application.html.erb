@@ -27,28 +27,26 @@
   <div class="section top" id="index-banner">
     <div class="container">
       <div class="row">
-        <div class="col s12 m12">
+        <div class="col s9">
           <a href="<%= index_path %>"><h1>TechTalk Exploder</h1></a>
         </div>
-        <!-- <div class="col s12 m3">
-
-        </div> -->
+        <div class="col s3">
+          <% if session? %>
+            <a href="/logout" class="waves-effect waves-light btn-large right"><i class="material-icons prefix left">account_circle</i>Logoff</a>
+          <% end %>
+        </div>
       </div>
     </div>
   </div>
 
-  <% if session? %>
-    <nav>
-      <div class="nav-wrapper">
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
-          <li><%= link_to 'Logoff', "/logout" %></li>
-        </ul>
-        <ul id="nav-mobile" class="left hide-on-med-and-down">
-          <li><%= link_to 'Novo Techtalk', "/techtalks/new" %></li>
-        </ul>
-      </div>
-    </nav>
-  <% end %>
+  <nav>
+    <div class="nav-wrapper center">
+      <% if session? %>
+        <a href="/techtalks/new" class="waves-effect waves-light btn-large"><i class="material-icons prefix left">add</i>Cadastrar Novo Techtalk</a>
+      <% end %>
+    </div>
+  </nav>
+
 
   <div class="row margin-top-15">
     <div class="container">
@@ -56,14 +54,14 @@
     </div>
   </div>
 
-  <div class="container">
+  <div class="container" id="main-content">
     <%= yield %>
   </div>
 
-  <footer class="page-footer">
-    <div class="row">
-      <p></p>
-    </div>
-  </footer>
-
 </body>
+
+<footer class="page-footer">
+  <div class="row">
+    <p></p>
+  </div>
+</footer>
