@@ -4,6 +4,7 @@ class TechtalksController < ApplicationController
 
   def index
     @techtalks = Techtalk.all
+    @techtalks = Techtalk.order('id desc').limit(10)
   end
 
   def new
@@ -14,18 +15,13 @@ class TechtalksController < ApplicationController
     @techtalk = Techtalk.new(techtalk_params)
     respond_to do |format|
       if @techtalk.save
-        ConfirmMailer.confirm_email(@techtalk).deliver
-        format.html { redirect_to @techtalk, notice: 'Techtalk was successfully created.' }
-        format.json { render :show, status: :created, location: @techtalk }
+        format.html { render :index, notice: 'Techtalk was successfully created.' }
+        format.json { render :index, status: :created, location: @techtalk }
       else
         format.html { render :new }
         format.json { render json: @techtalk.errors, status: :unprocessable_entity }
       end
     end
-  end
-
-  def list
-    @techtalks = Techtalk.order('id desc').limit(10)
   end
 
   private
