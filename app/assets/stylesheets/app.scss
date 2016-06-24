@@ -1,8 +1,8 @@
-$lightercolor: #F3FFBD;
-$lightcolor: #B2DBBF;
-$maincolor: #70C1B3;
-$darkcolor: #247BA0;
-$darkercolor: #265493;
+$lightercolor: #F0F3BD;
+$lightcolor: #02C39A;
+$maincolor: #00A896;
+$darkcolor: #028090;
+$darkercolor: #05668D  ;
 
 html {
   background-color: $lightercolor;
@@ -28,7 +28,7 @@ h2, h3 {
   background-color: $lightercolor;
 }
 
-.section.top {
+.section.top, .section.bot {
   background-color: $maincolor !important;
   color: white;
 }
