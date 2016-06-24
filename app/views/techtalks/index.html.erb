@@ -1,6 +1,10 @@
 <div class="row margin-top-15">
   <div class="col s12">
     <a class="waves-effect waves-light btn-large lighten-2 past-events-btn large-6">TechTalks</a>
+    <%= form_tag("/search", :method => "get", id: "search-form") do %>
+      <%= text_field_tag :keyword, params[:search], placeholder: "Search for a techtalk subject" %>
+      <%= submit_tag "Search", :name => nil %>
+  <% end %>
   </div>
 </div>
 
@@ -14,16 +18,16 @@
     <% @techtalks.each do |tech| %>
       <div class="col s6">
         <div class="card card-job box">
-          <div class="chip color">Mobile</div>
-          <div class="chip color">Android</div>
+          <% tech.tagsArray.each do |tag| %>
+            <div class="chip color"><%= tag %></div>
+          <% end %>
+          <p class="job-name card-title"><%= tech.title %></p>
+          <p class="job-description"><%= tech.description %></p>
           <p class="enterprise">Empresa: <a href="#" target="_blank" alt="Site da Empresa"><%= tech.company_name %></a></p>
-          <p class="job-name card-title"><%=tech.title%></p>
-          <p class="job-description"><%=tech.description%></p>
           <p class="date">24/06/2016</p>
           <%= link_to "Saiba mais", "#", class: "waves-effect btn-flat" %>
         </div>
       </div>
     <% end %>
   <% end %>
-
 </div>
