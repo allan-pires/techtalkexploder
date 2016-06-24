@@ -16,15 +16,19 @@
     </p>
   <% else %>
     <% @techtalks.each do |tech| %>
-    <div class="col s6">
+    <div class="col m6 s12">
       <div class="card card-job box">
-       <% tech.tagsArray.each do |tag| %>
-        <div class="chip color"><%=tag%></div>
+        <% tech.tagsArray.each do |tag| %>
+          <div class="chip color"><%= tag %></div>
         <% end %>
-        <p class="job-name card-title"><%=tech.title%></p>
-        <p class="job-description"><%=tech.description%></p>
-        <p class="enterprise"><%= tech.company_name%></a></p>
-        <p class="date"><%= tech.date%></p>
+        <div class="card-content">
+          <p class="card-title"><%= tech.title %></p>
+          <p><%= tech.description %></p>
+        </div>
+        <p class="enterprise">
+          <a href="<%= tech.url %>"><%= tech.company_name %></a>
+        </p>
+        <p class="date"><%= tech.date %></p>
         <%= link_to "Saiba mais", "#", class: "waves-effect btn-flat" %>
         </div>
       </div>
