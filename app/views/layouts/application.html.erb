@@ -40,12 +40,11 @@
   <% if session? %>
     <nav>
       <div class="nav-wrapper">
-        <a href="/profile" class="brand-logo left">
-        </a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><%= link_to 'Logoff', "/logout" %></li>
+        </ul>
         <ul id="nav-mobile" class="left hide-on-med-and-down">
           <li><%= link_to 'Novo Techtalk', "/techtalks/new" %></li>
-          <!-- <li><a href="badges.html">Components</a></li>
-          <li><a href="collapsible.html">JavaScript</a></li> -->
         </ul>
       </div>
     </nav>
