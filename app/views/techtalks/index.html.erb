@@ -28,7 +28,7 @@
           <a href="<%= tech.url %>"><%= tech.company_name %></a>
         </p>
         <p class="date"><%= tech.date %></p>
-        <%= link_to "Saiba mais", "#", class: "waves-effect btn-flat" %>
+        <%= link_to "Saiba mais", "/techtalks/#{tech.id}", class: "waves-effect btn-flat" %>
         </div>
       </div>
     <% end %>

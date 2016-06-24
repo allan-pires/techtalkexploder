@@ -6,7 +6,10 @@ Rails.application.routes.draw do
   get 'techtalks/index'
   get 'techtalks/new'
   post 'techtalks/create'
+  get 'techtalks/:id' => 'techtalks#show'
+
   get 'users/new'
+
 
   get '/signup' => 'users#new'
   post '/users' => 'users#create'
