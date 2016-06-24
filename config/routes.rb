@@ -4,7 +4,6 @@ Rails.application.routes.draw do
 
   get 'techtalks/index'
   get 'techtalks/new'
-  root 'techtalks#list'
 
   get '/signup' => 'users#new'
   post '/users' => 'users#create'
