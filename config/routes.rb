@@ -1,8 +1,20 @@
 Rails.application.routes.draw do
+
   root 'techtalks#index'
+
   get 'techtalks/index'
   get 'techtalks/new'
-  get 'users/new'
+  root 'techtalks#list'
+
+  get '/signup' => 'users#new'
+  post '/users' => 'users#create'
+
+  get '/login' => 'sessions#new'
+  post '/login' => 'sessions#create'
+  get '/logout' => 'sessions#destroy'
+
+  get '/auth/:provider/callback' => 'auth#callback'
+  get '/auth/failure' => 'auth#failure'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
