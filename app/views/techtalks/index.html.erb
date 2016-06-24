@@ -18,12 +18,14 @@
     <% @techtalks.each do |tech| %>
     <div class="col s6">
       <div class="card card-job box">
-       <% tech.tagsArray.each do |tag| %>
-        <div class="chip color"><%=tag%></div>
+        <% tech.tagsArray.each do |tag| %>
+          <div class="chip color"><%= tag %></div>
         <% end %>
-        <p class="job-name card-title"><%=tech.title%></p>
-        <p class="job-description"><%=tech.description%></p>
-        <p class="enterprise"><%= tech.company_name%></a></p>
+        <p class="job-name card-title"><%= tech.title %></p>
+        <p class="job-description"><%= tech.description %></p>
+        <p class="enterprise">
+          <a href="<%= tech.url %>"><%= tech.company_name %></a>
+        </p>
         <p class="date">24/06/2016</p>
         <%= link_to "Saiba mais", "#", class: "waves-effect btn-flat" %>
         </div>
