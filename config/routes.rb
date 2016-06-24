@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
+  get 'techtalks/index'
   get 'techtalks/new'
-  get 'techtalks/list'
   get 'users/new'
 
   # The priority is based upon order of creation: first created -> highest priority.

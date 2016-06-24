@@ -1,9 +1,10 @@
 class TechtalksController < ApplicationController
-	def new
 
+	def index
+		@techtalks = Techtalk.all
 	end
 
-	def list
-		@techtalks = Techtalk.all
+	def new
+
 	end
 end
