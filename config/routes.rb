@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
+  resources :techtalks
+
   root 'techtalks#index'
   get 'techtalks/index'
   get 'techtalks/new'
+  post 'techtalks/create'
   get 'users/new'
 
   # The priority is based upon order of creation: first created -> highest priority.

@@ -1,1 +1,49 @@
 <h2>Cadastro do TechTalk</h2>
+
+<%# if @techtalk.errors.any? %>
+<%# end %>
+
+<%= form_for @techtalk, url: { action: "create" }, html: { class: "form-horizontal" } do |f| %>
+  <%= label :type, 'Título do TechTalk' %>
+  <%= f.text_field :title, placeholder: "Ex.: TechTalk Explosion", input_html: { class: 'input-lg' } %>
+
+  <label>Categoria</label>
+  <p>
+    <%= f.radio_button :type, 'programming', checked: true %>
+    <%= label :type, 'Programação' %>
+  </p>
+  <p>
+    <%= f.radio_button :type, 'designer' %>
+    <%= label :type, 'Designer' %>
+  </p>
+  <p>
+    <%= f.radio_button :type, 'ux' %>
+    <%= label :type, 'UX' %>
+  </p>
+  <p>
+    <%= f.radio_button :type, 'ui' %>
+    <%= label :type, 'UI' %>
+  </p>
+  <p>
+    <%= f.radio_button :type, 'sysadmin' %>
+    <%= label :type, 'Administrador de Sistemas' %>
+  </p>
+  <p>
+    <%= f.radio_button :type, 'others' %>
+    <%= label :type, 'Outros' %>
+  </p>
+
+  <%= label :type, 'Descrição do TechTalk', class: "margin-top-15" %>
+  <%= f.text_field :description, as: :text %>
+
+  <%= label :type, 'Nome da empresa' %>
+  <%= f.text_field :company_name, placeholder: 'Informe o nome da sua empresa'  %>
+
+  <%= label :type, 'Site' %>
+  <%= f.text_field :url, placeholder: 'Ex.: www.google.com' %>
+
+  <%= label :type, 'Email' %>
+  <%= f.text_field :company_email, placeholder: 'seu-email@seu-dominio.com' %>
+
+  <%= f.submit "Cadastrar", class: "btn" %>
+<% end %>
