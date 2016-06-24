@@ -14,7 +14,7 @@ class TechtalksController < ApplicationController
 
     else
       @techtalks = Techtalk.all
-      @techtalks = Techtalk.order('id desc').limit(10)
+      @techtalks = Techtalk.order('date asc').limit(10)
     end
   end
 
@@ -53,6 +53,6 @@ class TechtalksController < ApplicationController
 
   private
     def techtalk_params
-      params.require(:techtalk).permit(:title, :description, :tags, :company_name, :url, :company_email, :token)
+      params.require(:techtalk).permit(:title, :description, :date, :tags, :company_name, :url, :company_email, :token)
     end
 end

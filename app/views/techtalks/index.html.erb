@@ -1,10 +1,5 @@
 <div class="row margin-top-15">
   <div class="col s12">
-    <a class="waves-effect waves-light btn-large lighten-2 past-events-btn large-6">TechTalks</a>
-      <%= form_tag("/search", :method => "get", id: "search-form") do %>
-      <%= text_field_tag :keyword, params[:search], placeholder: "Search for a techtalk subject" %>
-      <%= submit_tag "Search", :name => nil %>
-  <% end %>
   </div>
 </div>
 
@@ -24,7 +19,7 @@
         <p class="job-name card-title"><%=tech.title%></p>
         <p class="job-description"><%=tech.description%></p>
         <p class="enterprise"><%= tech.company_name%></a></p>
-        <p class="date">24/06/2016</p>
+        <p class="date"><%= tech.date%></p>
         <%= link_to "Saiba mais", "#", class: "waves-effect btn-flat" %>
         </div>
       </div>
