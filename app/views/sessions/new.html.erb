@@ -9,8 +9,8 @@
   <label for="password">Password: </label>
   <%= password_field_tag :password %>
 
-  <%= submit_tag "Submit", class: "btn" %>
+  <%= submit_tag "Entrar", class: "btn blue margin-top-15" %>
+  <%= link_to "Sign in with Google", "/auth/google_oauth2", class: "btn red margin-top-15" %>
+  <%= link_to "Não tenho uma conta", signup_path, class: "btn green margin-top-15" %>
 
 <% end %>
-
-<%= link_to "Sign in with Google", "/auth/google_oauth2", class: "btn margin-top-15" %>
