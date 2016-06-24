@@ -1,4 +1,61 @@
 <h1>Techtalks#new</h1>
 <p>Find me in app/views/techtalks/new.html.erb</p>
 
+<div class="row margin-top-15">
+  <div class="col s12">
+    <a class="waves-effect waves-light btn-large lighten-2 past-events-btn large-6">TechTalks</a>
+  </div>
+</div>
 
+<div class="row">
+  <%# techtalk.each do |tech| %>
+    <div class="col s6">
+      <div class="card card-job box">
+        <div class="chip color">Mobile</div>
+        <div class="chip color">Android</div>
+        <p class="enterprise">Empresa: <a href="#" target="_blank" alt="Site da Empresa">Nome da Empresa<%#= tech.name %></a></p>
+        <p class="job-name card-title">Título do TeckTalk</p>
+        <p class="job-description">Descrição breve do TechTalk</p>
+        <p class="date">24/06/2016</p>
+        <%= link_to "Saiba mais", "#", class: "waves-effect btn-flat" %>
+      </div>
+    </div>
+
+    <!-- EXEMPLOS -->
+    <div class="col s6">
+      <div class="card card-job box">
+        <div class="chip color">Mobile</div>
+        <div class="chip color">Android</div>
+        <p class="enterprise">Empresa: <a href="#" target="_blank" alt="Site da Empresa">Nome da Empresa</a></p>
+        <p class="job-name card-title">Título do TeckTalk</p>
+        <p class="job-description">Descrição breve do TechTalk</p>
+        <p class="date">24/06/2016</p>
+        <%= link_to "Saiba mais", "#", class: "waves-effect btn-flat" %>
+      </div>
+    </div>
+
+    <div class="col s6">
+      <div class="card card-job box">
+        <div class="chip color">Mobile</div>
+        <div class="chip color">Android</div>
+        <p class="enterprise">Empresa: <a href="#" target="_blank" alt="Site da Empresa">Nome da Empresa</a></p>
+        <p class="job-name card-title">Título do TeckTalk</p>
+        <p class="job-description">Descrição breve do TechTalk</p>
+        <p class="date">24/06/2016</p>
+        <%= link_to "Saiba mais", "#", class: "waves-effect btn-flat" %>
+      </div>
+    </div>
+
+    <div class="col s6">
+      <div class="card card-job box">
+        <div class="chip color">Mobile</div>
+        <div class="chip color">Android</div>
+        <p class="enterprise">Empresa: <a href="#" target="_blank" alt="Site da Empresa">Nome da Empresa</a></p>
+        <p class="job-name card-title">Título do TeckTalk</p>
+        <p class="job-description">Descrição breve do TechTalk</p>
+        <p class="date">24/06/2016</p>
+        <%= link_to "Saiba mais", "#", class: "waves-effect btn-flat" %>
+      </div>
+    </div>
+  <%# end %>
+</div>
