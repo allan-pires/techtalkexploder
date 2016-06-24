@@ -51,6 +51,10 @@ class TechtalksController < ApplicationController
     @techtalks = Techtalk.where(['tags LIKE ? OR title LIKE ? ', "%#{param}%", "%#{param}%"])
   end
 
+  def calendar
+  	@techtalk = Techtalk.all
+  end
+
   private
     def techtalk_params
       params.require(:techtalk).permit(:title, :description, :date, :tags, :company_name, :url, :company_email, :token)

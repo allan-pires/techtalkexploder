@@ -47,6 +47,7 @@ group :development, :test do
   gem 'byebug'
   gem 'rspec-rails', '~> 3.4'
   gem 'pry'
+  gem "simple_calendar", "~> 2.0"
 end
 
 group :development do
