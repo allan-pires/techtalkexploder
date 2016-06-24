@@ -1,0 +1,11 @@
+<h1>Techtalks#list</h1>
+<p>List of all techtalks</p>
+
+<table class="table">
+  <% @techtalks.each do |techtalk| %>
+    <tr>
+      <td><%=techtalk.name%></td>
+      <td><%=techtalk.description%></td>
+    </tr>
+  <% end %>
+</ul>
