@@ -1,0 +1,76 @@
+<div class="row margin-top-15">
+  <div class="col s12">
+
+<div class="row">
+
+<div class="month"> 
+  <ul>
+    <li class="prev">&#10094;</li>
+    <li class="next">&#10095;</li>
+    <li>
+      Agenda de Techtalks - <br>Junho-2016
+    </li>
+  </ul>
+</div>
+
+<ul class="weekdays">
+  <li>Dom</li>
+  <li>Seg</li>
+  <li>Ter</li>
+  <li>Qua</li>
+  <li>Qui</li>
+  <li>Dia de maldade</li>
+  <li>Sab</li>
+</ul>
+
+<ul class="days"> 
+
+  <li><span></span></li>  
+  <li><span></span></li>  
+  <li><span></span></li>  
+
+  <% (1..12).each do |i| %>
+    <li><span><%= i %></span></li>   
+  <% end %>
+
+  <li><span class="active">13</span></li>
+
+  <% (14..23).each do |i| %>
+    <li><span><%= i %></span></li>   
+  <% end %>
+
+  <li><span class="active">24</span></li>
+
+  <% (25..30).each do |i| %>
+    <li><span><%= i %></span></li>   
+  <% end %>
+</ul>
+</div>
+</div>
+
+      <div class="col s6">
+        <div class="card card-job box">
+          <div class="chip color">clean</div>
+          <div class="chip color">code</div>
+          <p class="job-name card-title">Clean code</p>
+          <p class="job-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+          <p class="enterprise">Company</a></p>
+          <p class="date">24-06-2016</p>
+          <%= link_to "Saiba mais", "#", class: "waves-effect btn-flat" %>
+        </div>
+      </div>
+
+      <div class="col s6">
+        <div class="card card-job box">
+          <div class="chip color">ruby</div>
+          <div class="chip color">rails</div>
+          <p class="job-name card-title">Ruby + Rails</p>
+          <p class="job-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+          <p class="enterprise">Company</a></p>
+          <p class="date">13-06-2016</p>
+          <%= link_to "Saiba mais", "#", class: "waves-effect btn-flat" %>
+        </div>
+      </div>
+
+  </div>
+</div>

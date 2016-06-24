@@ -19,6 +19,8 @@ Rails.application.routes.draw do
   get '/auth/failure' => 'auth#failure'
 
   get '/search' => 'techtalks#index'
+  get '/calendar' => 'techtalks#calendar'
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
