@@ -45,6 +45,10 @@ class TechtalksController < ApplicationController
     end
   end
 
+  def show
+    @techtalk = Techtalk.where(id: params[:id]).take
+  end
+
   def filter
     param = request.query_parameters['keyword']
     @techtalks = Techtalk.where(['tags LIKE ? OR title LIKE ? ', "%#{param}%", "%#{param}%"])
