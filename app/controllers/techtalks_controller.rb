@@ -29,6 +29,10 @@ class TechtalksController < ApplicationController
     @techtalks = Techtalk.where(['created_at BETWEEN ? and ?', "#{begin_date}%", "#{end_date}%"]).all
   end
 
+  def new
+    @techtalk = Techtalk.new
+  end
+
   def create
     @techtalk = Techtalk.new(techtalk_params)
     respond_to do |format|
