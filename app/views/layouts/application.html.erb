@@ -30,12 +30,26 @@
         <div class="col s12 m12">
           <a href="<%= index_path %>"><h1>TechTalk Exploder</h1></a>
         </div>
-        <div class="col s12 m3">
-          <%= link_to 'Cadastrar', "/techtalks/new", class: "btn-large" %>
-        </div>
+        <!-- <div class="col s12 m3">
+
+        </div> -->
       </div>
     </div>
   </div>
+
+  <% if session? %>
+    <nav>
+      <div class="nav-wrapper">
+        <a href="/profile" class="brand-logo left">
+        </a>
+        <ul id="nav-mobile" class="left hide-on-med-and-down">
+          <li><%= link_to 'Novo Techtalk', "/techtalks/new" %></li>
+          <!-- <li><a href="badges.html">Components</a></li>
+          <li><a href="collapsible.html">JavaScript</a></li> -->
+        </ul>
+      </div>
+    </nav>
+  <% end %>
 
   <div class="container">
     <%= yield %>

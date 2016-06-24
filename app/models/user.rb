@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  has_one :goole_oauth_credential
-  
+  has_many :google_oauth_credential
+
   has_secure_password
 end
