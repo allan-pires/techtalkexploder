@@ -13,7 +13,6 @@ class TechtalksController < ApplicationController
       end
 
     else
-      @techtalks = Techtalk.all
       @techtalks = Techtalk.order('date asc').limit(10)
     end
   end
@@ -37,7 +36,7 @@ class TechtalksController < ApplicationController
     @techtalk = Techtalk.new(techtalk_params)
     respond_to do |format|
       if @techtalk.save
-        format.html { render :index, notice: 'Techtalk was successfully created.' }
+        format.html { redirect_to "/" }
         format.json { render :index, status: :created, location: @techtalk }
       else
         format.html { render :new }
