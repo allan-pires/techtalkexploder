@@ -53,6 +53,6 @@ class TechtalksController < ApplicationController
 
   private
     def techtalk_params
-      params.require(:techtalk).permit(:title, :description, :type, :company_name, :url, :company_email, :token)
+      params.require(:techtalk).permit(:title, :description, :tags, :company_name, :url, :company_email, :token)
     end
 end
