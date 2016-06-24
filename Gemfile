@@ -35,7 +35,6 @@ gem 'unicorn'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'rspec-rails'
   gem 'foreman'
   gem 'sqlite3'
   gem 'factory_girl_rails'

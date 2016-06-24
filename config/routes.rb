@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root 'techtalks#index'
   get 'techtalks/index'
   get 'techtalks/new'
   get 'users/new'
