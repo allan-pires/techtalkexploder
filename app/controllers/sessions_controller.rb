@@ -1,6 +1,9 @@
 class SessionsController < ApplicationController
 
   def new
+    if current_user
+      redirect_to techtalks_path
+    end
   end
 
   def create
