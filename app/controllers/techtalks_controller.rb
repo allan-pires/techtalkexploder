@@ -1,5 +1,7 @@
 class TechtalksController < ApplicationController
 
+  	before_filter :authorize, except: [:list]
+  
 	def index
 		if (request.query_parameters.any?)
 			filterByName
@@ -21,6 +23,10 @@ class TechtalksController < ApplicationController
 	def filterByDate
 		begin_date = request.query_parameters['begin_date']
 		@techtalks = Techtalk.where(date: begin_date).all
+	end
+
+	def list
+		@techtalks = Techtalk.order('id desc').limit(10)
 	end
 
 end
