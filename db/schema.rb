@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160624185139) do
+ActiveRecord::Schema.define(version: 20160624195612) do
 
   create_table "google_oauth_credentials", force: :cascade do |t|
     t.integer "user_id", limit: 4
@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(version: 20160624185139) do
     t.string   "url",           limit: 255
     t.string   "company_email", limit: 255
     t.string   "token",         limit: 255
+    t.date     "date"
   end
 
   create_table "users", force: :cascade do |t|

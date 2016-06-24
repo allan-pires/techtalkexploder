@@ -10,6 +10,9 @@
   <%= f.label :description, 'Descrição do TechTalk' %>
   <%= f.text_field :description, placeholder: 'Ex: Descubra como revolucionar a web utilizando essa nova ferramenta', length: "120" %>
 
+  <%= f.label :date, 'Date' %>
+  <%= f.date_field :date %>
+
   <%= f.label :tags, 'Tags' %>
   <%= f.text_field :tags, placeholder: "Ex.: Programação, Design, UX...", input_html: { class: 'input-field' } %>
 

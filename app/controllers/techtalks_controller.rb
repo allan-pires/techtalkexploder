@@ -13,8 +13,7 @@ class TechtalksController < ApplicationController
       end
 
     else
-      @techtalks = Techtalk.all
-      @techtalks = Techtalk.order('id desc').limit(10)
+      @techtalks = Techtalk.order('date asc').limit(10)
     end
   end
 
@@ -37,7 +36,7 @@ class TechtalksController < ApplicationController
     @techtalk = Techtalk.new(techtalk_params)
     respond_to do |format|
       if @techtalk.save
-        format.html { render :index, notice: 'Techtalk was successfully created.' }
+        format.html { redirect_to "/" }
         format.json { render :index, status: :created, location: @techtalk }
       else
         format.html { render :new }
@@ -53,6 +52,6 @@ class TechtalksController < ApplicationController
 
   private
     def techtalk_params
-      params.require(:techtalk).permit(:title, :description, :tags, :company_name, :url, :company_email, :token)
+      params.require(:techtalk).permit(:title, :description, :date, :tags, :company_name, :url, :company_email, :token)
     end
 end
