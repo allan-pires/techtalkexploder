@@ -6,6 +6,9 @@ $darkercolor: #05668D  ;
 
 html {
   background-color: $lightercolor;
+  p {
+    color: $darkercolor;
+  }
 }
 
 h1 {
@@ -14,6 +17,14 @@ h1 {
 
 h2, h3 {
   color: $darkercolor;
+}
+
+footer {
+  margin-top: 20px;
+  padding-bottom: 0px;
+  min-height: 60px;
+  background-color: $maincolor !important;
+  color: white;
 }
 
 .menu {
@@ -28,7 +39,7 @@ h2, h3 {
   background-color: $lightercolor;
 }
 
-.section.top, .section.bot {
+.section.top {
   background-color: $maincolor !important;
   color: white;
 }
