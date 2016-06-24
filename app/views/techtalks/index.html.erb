@@ -2,14 +2,19 @@
   <div class="col s12">
     <a class="waves-effect waves-light btn-large lighten-2 past-events-btn large-6">TechTalks</a>
     <%= form_tag("/search", :method => "get", id: "search-form") do %>
-    	<%= text_field_tag :keyword, params[:search], placeholder: "Search for a techtalk subject" %>
-    	<%= submit_tag "Search", :name => nil %>
-	<% end %>
+      <%= text_field_tag :keyword, params[:search], placeholder: "Search for a techtalk subject" %>
+      <%= submit_tag "Search", :name => nil %>
+  <% end %>
   </div>
 </div>
 
 <div class="row">
 
+  <% if @techtalks.nil? %>
+    <p>
+      Não há nenhum TechTalk cadastrado ainda.
+    </p>
+  <% else %>
   	<% @techtalks.each do |tech| %>
     <div class="col s6">
       <div class="card card-job box">
@@ -21,7 +26,8 @@
         <p class="enterprise"><%= tech.company_name%></a></p>
         <p class="date">24/06/2016</p>
         <%= link_to "Saiba mais", "#", class: "waves-effect btn-flat" %>
+        </div>
       </div>
-    </div>
-  	<% end %>
+    <% end %>
+  <% end %>
 </div>

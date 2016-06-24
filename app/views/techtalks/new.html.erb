@@ -7,38 +7,11 @@
   <%= f.label :type, 'Título do TechTalk' %>
   <%= f.text_field :title, placeholder: "Ex.: TechTalk Explosion", input_html: { class: 'input-field' } %>
 
-  <label>Categoria</label>
-  <p>
-    <%= f.radio_button :type, 'programming', checked: true %>
-    <%= label :type, 'Programação' %>
-  </p>
-  <p>
-    <%= f.radio_button :type, 'designer' %>
-    <%= label :type, 'Designer' %>
-  </p>
-  <p>
-    <%= f.radio_button :type, 'ux' %>
-    <%= label :type, 'UX' %>
-  </p>
-  <p>
-    <%= f.radio_button :type, 'ui' %>
-    <%= label :type, 'UI' %>
-  </p>
-  <p>
-    <%= f.radio_button :type, 'sysadmin' %>
-    <%= label :type, 'Administrador de Sistemas' %>
-  </p>
-  <p>
-    <%= f.radio_button :type, 'others' %>
-    <%= label :type, 'Outros' %>
-  </p>
-
   <%= f.label :type, 'Descrição do TechTalk' %>
   <%= f.text_area :description, class: "materialize-textarea", length: "120" %>
 
   <%= f.label :company_name, 'Nome da empresa' %>
   <div class="input-field col s6">
-    <i class="material-icons prefix">account_circle</i>
     <%= f.text_field :company_name, placeholder: 'Informe o nome da sua empresa' %>
   </div>
 
@@ -47,7 +20,6 @@
 
   <%= f.label :company_email, 'Email' %>
   <div class="input-field col s6">
-    <i class="material-icons prefix">email</i>
     <%= f.text_field :company_email, placeholder: 'seu-email@seu-dominio.com', class: "input-field" %>
   </div>
 
