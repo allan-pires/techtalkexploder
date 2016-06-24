@@ -4,8 +4,8 @@
 <%# end %>
 
 <%= form_for @techtalk, url: { action: "create" }, html: { class: "form-horizontal" } do |f| %>
-  <%= label :type, 'Título do TechTalk' %>
-  <%= f.text_field :title, placeholder: "Ex.: TechTalk Explosion", input_html: { class: 'input-lg' } %>
+  <%= f.label :type, 'Título do TechTalk' %>
+  <%= f.text_field :title, placeholder: "Ex.: TechTalk Explosion", input_html: { class: 'input-field' } %>
 
   <label>Categoria</label>
   <p>
@@ -33,17 +33,23 @@
     <%= label :type, 'Outros' %>
   </p>
 
-  <%= label :type, 'Descrição do TechTalk', class: "margin-top-15" %>
-  <%= f.text_field :description, as: :text %>
+  <%= f.label :type, 'Descrição do TechTalk' %>
+  <%= f.text_area :description, class: "materialize-textarea", length: "120" %>
 
-  <%= label :type, 'Nome da empresa' %>
-  <%= f.text_field :company_name, placeholder: 'Informe o nome da sua empresa'  %>
+  <%= f.label :company_name, 'Nome da empresa' %>
+  <div class="input-field col s6">
+    <i class="material-icons prefix">account_circle</i>
+    <%= f.text_field :company_name, placeholder: 'Informe o nome da sua empresa' %>
+  </div>
 
-  <%= label :type, 'Site' %>
-  <%= f.text_field :url, placeholder: 'Ex.: www.google.com' %>
+  <%= f.label :url, 'Site' %>
+  <%= f.text_field :url, placeholder: 'Ex.: www.google.com', class: "input-field" %>
 
-  <%= label :type, 'Email' %>
-  <%= f.text_field :company_email, placeholder: 'seu-email@seu-dominio.com' %>
+  <%= f.label :company_email, 'Email' %>
+  <div class="input-field col s6">
+    <i class="material-icons prefix">email</i>
+    <%= f.text_field :company_email, placeholder: 'seu-email@seu-dominio.com', class: "input-field" %>
+  </div>
 
   <%= f.submit "Cadastrar", class: "btn" %>
 <% end %>

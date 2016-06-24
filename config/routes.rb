@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   resources :techtalks
 
-  root 'techtalks#index'
+  root 'techtalks#index', as: 'index'
 
   get 'techtalks/index'
   get 'techtalks/new'
