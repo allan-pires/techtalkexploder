@@ -4,11 +4,14 @@
 <%# end %>
 
 <%= form_for @techtalk, url: { action: "create" }, html: { class: "form-horizontal" } do |f| %>
-  <%= f.label :type, 'Título do TechTalk' %>
+  <%= f.label :title, 'Título do TechTalk' %>
   <%= f.text_field :title, placeholder: "Ex.: TechTalk Explosion", input_html: { class: 'input-field' } %>
 
-  <%= f.label :type, 'Descrição do TechTalk' %>
+  <%= f.label :description, 'Descrição do TechTalk' %>
   <%= f.text_area :description, class: "materialize-textarea", length: "120" %>
+
+  <%= f.label :type, 'Categoria' %>
+  <%= f.text_field :type, placeholder: "Ex.: Programação, Design, UX...", input_html: { class: 'input-field' } %>
 
   <%= f.label :company_name, 'Nome da empresa' %>
   <div class="input-field col s6">
