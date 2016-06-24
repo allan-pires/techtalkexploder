@@ -1,9 +1,12 @@
 Rails.application.routes.draw do
+  resources :techtalks
 
-  root 'techtalks#index'
+  root 'techtalks#index', as: 'index'
 
   get 'techtalks/index'
   get 'techtalks/new'
+  post 'techtalks/create'
+  get 'users/new'
 
   get '/signup' => 'users#new'
   post '/users' => 'users#create'
