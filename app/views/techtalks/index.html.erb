@@ -1,7 +1,7 @@
 <div class="row margin-top-15">
   <div class="col s12">
     <a class="waves-effect waves-light btn-large lighten-2 past-events-btn large-6">TechTalks</a>
-    <%= form_tag("/search", :method => "get", id: "search-form") do %>
+      <%= form_tag("/search", :method => "get", id: "search-form") do %>
       <%= text_field_tag :keyword, params[:search], placeholder: "Search for a techtalk subject" %>
       <%= submit_tag "Search", :name => nil %>
   <% end %>
