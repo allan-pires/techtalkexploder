@@ -1,13 +1,13 @@
 <!-- app/views/users/new.html.erb -->
 
-<h1>Signup!</h1>
+<h1>Cadastre-se</h1>
 
 <%= form_for :user, url: '/users' do |f| %>
+  <%= f.label "Nome" %> <%= f.text_field :name %>
+  <%= f.label "Email" %> <%= f.text_field :email, class: "validate" %>
+  <%= f.label "Password" %> <%= f.password_field :password %>
+  <%= f.label "Confirmação de senha" %> <%= f.password_field :password_confirmation %>
 
-  Name: <%= f.text_field :name %>
-  Email: <%= f.text_field :email %>
-  Password: <%= f.password_field :password %>
-  Password Confirmation: <%= f.password_field :password_confirmation %>
-  <%= f.submit "Submit" %>
+  <%= f.submit "Cadastrar", class: "btn waves-effect waves-light btn-large" %>
 
 <% end %>
